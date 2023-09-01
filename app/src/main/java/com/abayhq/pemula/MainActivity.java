@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MainActivity2.class);
         AlertDialog.Builder alrt = new AlertDialog.Builder(this);
         Button btn = findViewById(R.id.button1);
-        String fgrNama = "abayhq";
+        String fgNama = "abayhq";
         String fgrPass = "abay";
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,13 +29,13 @@ public class MainActivity extends AppCompatActivity {
                 EditText t1 = findViewById(R.id.txtNama);
                 EditText t2 = findViewById(R.id.txtPass);
                 TextView txt = findViewById(R.id.txtHasil);
-                if (t1.toString() == fgrNama && t2.toString() == fgrPass){
+                if (t1.toString() == fgNama && t2.toString() == fgrPass){
                     txt.setText("login");//startActivity(intent);
 
-                } else if (t1.toString() == fgrNama && t2.toString() != fgrPass) {
+                } else if (t1.toString() == fgNama && t2.toString() != fgrPass) {
                     txt.setText("salah password");//alrt.setMessage("Password yang anda masukkan salah");
 
-                }else if (t1.toString() != fgrNama && t2.toString() == fgrPass) {
+                }else if (t1.toString() != fgNama && t2.toString() == fgrPass) {
                     txt.setText("salah nama");//alrt.setMessage("Nama yang anda masukkan salah");
                 }else{
                     txt.setText("salah semua");//alrt.setMessage("Nama dan Password salah");
